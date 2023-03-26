@@ -12,6 +12,7 @@ import sosTile from "./../assets/sos-window.png"
 import progressScore from "./../assets/progressScore.png"
 import DialogTitle from "@mui/material/DialogTitle"
 import Dialog from "@mui/material/Dialog"
+import StarIcon from "@mui/icons-material/Star"
 
 function DriverWindow(props) {
   const { onClose, selectedValue, open } = props
@@ -114,6 +115,7 @@ const Dashboard = () => {
                     width: "165px",
                   }}
                 />
+                <StarIcon className="star-icon" />
                 <p className="text-center">CID: cust000002</p>
                 <p className="text-center"> John Doe</p>
                 <Button>Loyalty Voucher</Button>
