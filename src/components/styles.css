@@ -1,0 +1,195 @@
+.logo {
+  width: auto;
+  height: 80px;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+.App form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: rgba(255, 0, 0, 0.6);
+  margin-right: 20px;
+  margin-bottom: 5px;
+}
+
+.error-message::before {
+  content: "⚠ ";
+}
+
+.gap-x-8 {
+  column-gap: 0rem;
+}
+
+.nav-links,
+.nav-links ul li a button {
+  background: #6fc2b0;
+  color: #000;
+}
+
+.nav-links ul li a button {
+  background: #000;
+  color: #6fc2b0;
+}
+
+.nav-links ul li {
+  padding: 2px 10px;
+}
+
+.nav-links ul li a {
+  vertical-align: sub;
+}
+
+.nav-links ul li:hover {
+  border: 1px solid black;
+  border-radius: 4px;
+  background: #000;
+  color: #6fc2b0;
+}
+
+.nav-links ul li a button:hover {
+  background: none;
+}
+
+.MuiInputBase-colorPrimary {
+  color: #fff !important;
+}
+
+.contact-us-form {
+  background: #ccc;
+}
+
+.wrapper-section h2,
+.wrapper-section p {
+  margin: 0 auto;
+}
+
+.main-content-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.content-one,
+.content-two,
+.content-three {
+  padding: 20px;
+  margin: 10px 10px 0;
+  border: 1px solid #6fc2b0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.content-one h3,
+.content-two h3,
+.content-three h3 {
+  font-weight: bold;
+  color: #6fc2b0;
+}
+
+.content-one,
+.content-three {
+  margin-right: auto;
+}
+
+.content-two {
+  margin-left: auto;
+  width: 80%;
+}
+
+.group.container {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.group.container > div > p {
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.MuiDialogActions-root button {
+  color: #000;
+  background: #6fc2b0;
+}
+
+.MuiOutlinedInput-root input {
+  color: #000;
+}
+
+.dashboard-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.dashboard-section-one {
+  color: #000;
+  background: #d5c6ff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.dashboard-section-two {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-section-one img {
+  width: 200px;
+  height: auto;
+}
+
+.dashboard-section-one p {
+  margin: 5px 20px;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.dashboard-section-one button,
+.dashboard-section-two button {
+  background-color: #000;
+  color: #6fc2b0;
+  width: 200px;
+  border-radius: 10px;
+  display: block;
+  margin: 10px;
+}
+
+.dashboard-section-one button:hover,
+.dashboard-section-two button:hover {
+  background-color: #000;
+  color: #6fc2b0;
+}
+
+.dashboard-section-two > div {
+  width: 400px;
+  height: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #d5c6ff;
+}
+
+.dashboard-section-two > div > p,
+.dashboard-section-two div p {
+  margin: 10px;
+  color: #000;
+  font-weight: bold;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+  color: black;
+  cursor: pointer;
+}
