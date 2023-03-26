@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Button, TextareaAutosize, TextField } from "@mui/material"
+import { Box, Button, TextField } from "@mui/material"
 import { useForm } from "react-hook-form"
 import "./styles.css"
 
@@ -12,11 +12,13 @@ const Contact = () => {
 
   console.log(errors)
   return (
-    <div name="contact" className="w-full h-screen bg-[#0a192f] flex justify-center items-center p-4">
+    <div name="contact" className="w-full h-screen bg-[#fff] flex justify-center items-center p-4">
       <div className="flex flex-col max-w-[600px] w-full">
         <div className="pb-8 flex flex-col justify-center w-full h-full items-center">
-          <p className="text-4xl font-bold inline border-b-4 border-cyan-500 text-gray-300">Contact</p>
-          <p className="text-gray-300 py-4">Get in touch, we’re happy to help</p>
+          <p className="text-4xl font-bold inline border-b-4 text-black" style={{ borderColor: "#d5c6ff" }}>
+            Contact
+          </p>
+          <p className="text-black py-4">Get in touch, we’re happy to help</p>
         </div>
         <form className="contact-us-form" onSubmit={handleSubmit(onSubmit)}>
           <Box
@@ -32,16 +34,12 @@ const Contact = () => {
               variant="outlined"
               label="Email"
               name="email"
-              type={"text"}
+              type="text"
               placeholder="jhonny@email.com"
-              // inputRef={register({
-              //   required: true,
-              //   pattern: /\S+@\S+\.\S+/,
-              // })}
+              InputProps={{
+                required: true,
+              }}
             />
-
-            {/* {errors.email && errors.email.type === "email" && <span className="error-message">This is required field</span>}
-            {errors?.email && errors?.email.type === "pattern" && <span className="error-message">Enter a valid email</span>} */}
           </Box>
           <Box
             sx={{
@@ -49,8 +47,6 @@ const Contact = () => {
             }}
           >
             <TextField id="firstname" variant="outlined" label="Firstname" name="firstname" type="text" placeholder="First name" className="input-field" />
-            {/* {errors.password && errors.password.type === "required" && <span className="error-message">This is required field</span>}
-            {errors.password && errors.password.type === "minLength" && <span className="error-message">Minimum characters 4 required</span>} */}
           </Box>
           <Box
             sx={{
@@ -58,8 +54,6 @@ const Contact = () => {
             }}
           >
             <TextField id="lastname" variant="outlined" label="Lastname" name="lastname" type="text" placeholder="Last name" className="input-field" />
-            {/* {errors.password && errors.password.type === "required" && <span className="error-message">This is required field</span>}
-            {errors.password && errors.password.type === "minLength" && <span className="error-message">Minimum characters 4 required</span>} */}
           </Box>
           <Box
             sx={{
@@ -79,8 +73,6 @@ const Contact = () => {
                 minLength: 10,
               }}
             />
-            {/* {errors.password && errors.password.type === "required" && <span className="error-message">This is required field</span>}
-            {errors.password && errors.password.type === "minLength" && <span className="error-message">Minimum characters 4 required</span>} */}
           </Box>
           <Box
             sx={{
@@ -98,8 +90,6 @@ const Contact = () => {
               placeholder="Additional information"
               className="input-field"
             />
-            {/* {errors.password && errors.password.type === "required" && <span className="error-message">This is required field</span>}
-            {errors.password && errors.password.type === "minLength" && <span className="error-message">Minimum characters 4 required</span>} */}
           </Box>
           <Box
             sx={{

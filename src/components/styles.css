@@ -28,17 +28,38 @@
   column-gap: 0rem;
 }
 
-.nav-links,
-.nav-links ul li a button {
-  background: #6fc2b0;
+.nav-links {
+  background: #fff;
   color: #000;
 }
 
-.nav-links ul li a button {
-  background: #000;
-  color: #6fc2b0;
+.nav-links ul li a button,
+.home-tile {
+  background: #d5c6ff;
+  color: #000;
 }
 
+.home-tile {
+  border-radius: 20px;
+  padding: 55px;
+  margin-bottom: 50px;
+}
+
+.home-tile h3 {
+  margin-left: 11rem;
+}
+
+.logo-section {
+  position: absolute;
+  top: 25%;
+  z-index: 10;
+  right: 19%;
+}
+.wheelyLogo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
 .nav-links ul li {
   padding: 2px 10px;
 }
@@ -50,20 +71,17 @@
 .nav-links ul li:hover {
   border: 1px solid black;
   border-radius: 4px;
-  background: #000;
-  color: #6fc2b0;
+  background: #d5c6ff;
+  color: #000;
 }
 
 .nav-links ul li a button:hover {
   background: none;
+  box-shadow: none;
 }
 
 .MuiInputBase-colorPrimary {
   color: #fff !important;
-}
-
-.contact-us-form {
-  background: #ccc;
 }
 
 .wrapper-section h2,
@@ -82,20 +100,36 @@
 .content-one,
 .content-two,
 .content-three {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-one > div:nth-child(1),
+.content-two > div:nth-child(2),
+.content-three > div:nth-child(1) {
   padding: 20px;
-  margin: 10px 10px 0;
-  border: 1px solid #6fc2b0;
-  border-radius: 4px;
+  margin: 10px 0 0 0;
+  background: #d5c6ff;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   width: 70%;
+  color: #000;
 }
 
+.content-one > div > img,
+.content-two > div > img,
+.content-three > div > img {
+  border-radius: 20px;
+  margin-top: 10px;
+  width: 150px;
+  margin-left: 5px;
+}
 .content-one h3,
 .content-two h3,
 .content-three h3 {
   font-weight: bold;
-  color: #6fc2b0;
+  color: #000;
 }
 
 .content-one,
@@ -137,13 +171,14 @@
   color: #000;
   background: #d5c6ff;
   border-radius: 10px;
-  padding: 10px;
+  padding: 25px;
   margin: 10px;
 }
 
 .dashboard-section-two {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .dashboard-section-one img {
@@ -159,18 +194,18 @@
 
 .dashboard-section-one button,
 .dashboard-section-two button {
-  background-color: #000;
-  color: #6fc2b0;
+  background-color: #9082ec;
+  color: #fff;
   width: 200px;
-  border-radius: 10px;
+  border-radius: 20px;
   display: block;
   margin: 10px;
 }
 
 .dashboard-section-one button:hover,
 .dashboard-section-two button:hover {
-  background-color: #000;
-  color: #6fc2b0;
+  background-color: #fff;
+  color: #9082ec;
 }
 
 .dashboard-section-two > div {
@@ -192,4 +227,27 @@
 .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
   color: black;
   cursor: pointer;
+  font-size: 34px;
+}
+
+.about-tile p {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.MuiButton-sizeMedium.MuiButton-containedSizeMedium {
+  color: #000;
+  background-color: #d5c6ff;
+}
+
+.MuiButton-sizeMedium.MuiButton-containedSizeMedium:hover {
+  color: #000;
+  background-color: #d5c6ff;
+}
+
+.footer-section {
+  height: 20%;
+  padding: 20px;
+  text-align: center;
+  font-weight: normal;
 }

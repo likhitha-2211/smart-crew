@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react"
-import { FaBars, FaTimes, FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa" //FaFacebook, FaLinkedinIn
+import { FaBars, FaTimes, FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa"
 import { HiOutlineMail } from "react-icons/hi"
-import { BsFillPersonLinesFill } from "react-icons/bs"
 import { Link } from "react-scroll"
 import Button from "@mui/material/Button"
 import SignIn from "./SignIn"
+import SignUp from "./SignUp"
 import "./styles.css"
 import logo from "./../assets/logo.png"
 
@@ -14,6 +14,7 @@ const Navbar = (props) => {
   const handleClick = () => setNav(!nav)
 
   const [open, setOpen] = useState(false)
+  const [register, setRegister] = useState(false)
 
   // function to handle modal open
   const handleOpen = () => {
@@ -21,10 +22,15 @@ const Navbar = (props) => {
     setOpen(true)
   }
 
+  const handleRegister = () => {
+    console.log("register")
+    setRegister(true)
+  }
   // function to handle modal close
   const handleClose = () => {
     console.log("close")
     setOpen(false)
+    setRegister(false)
   }
 
   const handleLogout = () => {
@@ -42,7 +48,7 @@ const Navbar = (props) => {
         <img src={logo} alt="Logo" className="logo" />
       </div>
       {open && <SignIn open={open || false} handleClose={handleClose} />}
-
+      {register && <SignUp register={register || false} handleClose={handleClose} />}
       {/* menu */}
       <ul className="hidden md:flex gap-x-8">
         <li>
@@ -57,11 +63,11 @@ const Navbar = (props) => {
             </Link>
           </li>
         )}
-        <li>
+        {/* <li>
           <Link to="usecases" smooth={true} duration={500}>
             UseCases
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="about" smooth={true} duration={500}>
             About Us
@@ -84,7 +90,7 @@ const Navbar = (props) => {
         {!authenticatedUser && (
           <li>
             <Link to="home" smooth={true} duration={500}>
-              <Button variant="contained" onClick={handleOpen}>
+              <Button variant="contained" onClick={handleRegister}>
                 SIGN UP
               </Button>
             </Link>
@@ -120,12 +126,12 @@ const Navbar = (props) => {
             </Link>
           </li>
         )}
-        <li className="py-6 text-4xl">
+        {/* <li className="py-6 text-4xl">
           {" "}
           <Link onClick={handleClick} to="usecases" smooth={true} duration={500}>
             UseCases
           </Link>
-        </li>
+        </li> */}
         <li className="py-6 text-4xl">
           {" "}
           <Link onClick={handleClick} to="about" smooth={true} duration={500}>

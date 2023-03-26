@@ -63,49 +63,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const SignInForm = ({ handleClose, open }) => {
+const SignUpForm = ({ handleClose, open }) => {
   const classes = useStyles()
-  // create state variables for each input
-  const [customerId, setCustomerId] = useState("")
-  const [password, setPassword] = useState("")
-  const [authenticated, setAuthenticated] = useState(false)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     handleClose()
-    console.log(customerId, password, localStorage.getItem("authenticated"))
-
-    if (customerId === "cust000002" && password === "password@123") {
-      console.log(customerId, password)
-      console.log(localStorage.getItem("authenticated"))
-      setAuthenticated(true)
-      localStorage.setItem("authenticated", true)
-      window.location.href = "/dashboard"
-    } else {
-      setAuthenticated(false)
-      localStorage.setItem("authenticated", false)
-      alert("Incorrect details")
-
-      window.location.href = "/"
-    }
   }
 
   return (
     <BootstrapDialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
       <BootstrapDialogTitle id="customized-dialog-title" onClose={handleClose}>
-        Sign In
+        Sign Up
       </BootstrapDialogTitle>
       <form className={classes.root} onSubmit={handleSubmit}>
         <DialogContent dividers>
-          <TextField type="text" label="CustomerId" variant="outlined" required value={customerId} onChange={(e) => setCustomerId(e.target.value)} />
-          <TextField label="Password" variant="outlined" type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
+          <TextField type="text" label="Email" variant="outlined" required />
+          <TextField label="Password" variant="outlined" type="password" required />
+          <TextField label="Confirm Password" variant="outlined" type="password" required />
         </DialogContent>
         <DialogActions>
           <div>
-            <Button variant="contained" onClick={handleClose}>
-              Cancel
-            </Button>
             <Button type="submit" variant="contained" color="primary">
-              Submit
+              Create Account
             </Button>
           </div>
         </DialogActions>
@@ -114,4 +94,4 @@ const SignInForm = ({ handleClose, open }) => {
   )
 }
 
-export default SignInForm
+export default SignUpForm
