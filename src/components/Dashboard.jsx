@@ -139,7 +139,7 @@ const Dashboard = () => {
               </div>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div>
-                  <img src={chair} style={{ width: "100px", height: "120px", borderRadius: "10px" }} />
+                  <img src={chair} style={{ width: "120px", height: "120px", borderRadius: "10px" }} />
                 </div>
                 <div style={{ margin: "10px" }}>
                   <p>Customization Available</p>
@@ -154,7 +154,7 @@ const Dashboard = () => {
               </div>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div>
-                  <img src={heartRate} style={{ width: "200px", height: "120px", borderRadius: "10px" }} />
+                  <img src={heartRate} style={{ width: "240px", height: "120px", borderRadius: "10px" }} />
                 </div>
                 <div style={{ margin: "0px" }}>
                   <p style={{ color: "red" }}>HIGH Heart Rate !</p>
